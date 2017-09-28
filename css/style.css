@@ -192,6 +192,21 @@ yamaps
 	width: 100%;
 	height: 26px;
 }
+.block {
+	display: block;
+	border:0;
+	background: #f67140;
+	padding: 10px 34px;
+	text-transform: uppercase;
+	color: #fff;
+	font-family: "Helvetica Neue";
+	font-size: 14px;
+	-moz-border-radius: 2px; 
+	-webkit-border-radius: 2px; 
+	-khtml-border-radius: 2px; 
+	border-radius: 2px;
+	font-weight: 800;
+}
  
 @media (min-width: 768px) {
   .col-sm-1-5 {
@@ -440,6 +455,7 @@ yamaps
 .block3
 {
 	padding: 107px 0px;
+	border-bottom:2px solid #c7c7c7;
 }
 .block3 h2
 {
@@ -534,6 +550,7 @@ yamaps
 .block4
 {
 	padding: 100px 0px;
+	border-bottom:2px solid #c7c7c7;
 }
 .bloc4 .margin
 {
@@ -774,3 +791,48 @@ yamaps
 /*
 	END FOOTER
 */
+
+/*
+	POMP UP
+*/	
+	#pomp
+	{
+		position: fixed;
+		top:38vh;
+		width: 100%;
+		z-index: 10000;
+	}
+	#pomp>*
+	{
+		position: relative;
+		z-index: 1000;
+	}
+	#pomp::after
+	{
+		content:"";
+		display: block;
+		position: absolute;
+		top: -200%;
+		width: 100%;
+		height: 200vh;
+		z-index: 999;
+		background: rgba(0,0,0,1);
+	}
+
+	#pomp .row
+	{
+		padding: 50px 0;
+	}
+	#pomp h2
+	{
+		margin-bottom: 50px;
+	}
+	#pomp .bgp
+	{
+		padding: 50px 0;
+		background: #fff;
+		border-radius: 4px;
+	}
+/*
+	END POMP UP
+*/	

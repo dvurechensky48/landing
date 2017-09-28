@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
 	<!-- Main css -->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type='text/javascript' src='http://scriptjava.net/source/scriptjava/scriptjava.js'></script>
    <title>BITRIX</title>
  </head>
  <body>
@@ -409,25 +410,25 @@
 	 				<li>Если желающих больше - сообщите об этом менеджеру, мы что-нибудь придумаем!</li>
 	 			</ul>
 	 		</div>
-	 		<form id="form" class="row" action="" method="">
+	 		<form id="form" class="row" action="send.php" method="post">
 	 			<div class="marginTop"></div>
 	 			<div>
 		 			<div class="col-lg-4 col-md-4">
 		 				<div class="title">Представтесь пожалуйста</div>
-		 				<input type="text" name="" placeholder="Имя*" required>
-		 				<input type="text" name="" placeholder="Фамилия*" required>
+		 				<input type="text" name="name" placeholder="Имя*" required>
+		 				<input type="text" name="second_name" placeholder="Фамилия*" required>
 		 			</div>
 		 			
 		 			<div class="col-lg-4 col-md-4">
 		 				<div class="title">Сведения о кампании</div>
-		 				<input type="text" name="" placeholder="Название кампании*" required>
-		 				<input type="text" name="" placeholder="Должность*" required>
+		 				<input type="text" name="company" placeholder="Название кампании*" required>
+		 				<input type="text" name="position" placeholder="Должность*" required>
 		 			</div>	
 		 			
 		 			<div class="col-lg-4 col-md-4">
 		 				<div class="title">Укажите контактные данные</div>
-		 				<input type="text" name="" placeholder="Электронная почта*" required>
-		 				<input type="text" name="" placeholder="Телефон*" required>
+		 				<input type="text" name="email" placeholder="Электронная почта*" required>
+		 				<input type="text" name="phone" placeholder="Телефон*" required>
 		 			</div>
 
 	 			</div>
@@ -459,7 +460,7 @@
 			 			</div>	
 		 			</div>
 		 			<div class="col-lg-4 col-sm-6 col-md-4 col-xs-6">
-		 				<button type="submit">Зарегестрироваться на семинрае</button>
+		 				<button type="text">Зарегестрироваться на семинрае</button>
 		 			</div>
 	 			</div>
 	 			<div class="clearfix"></div>
