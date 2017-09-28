@@ -20,7 +20,10 @@ header
 	position: relative;
 	display: block;
 	height: 620px;
-	background: #fff;
+	background-image: url(../img/bg1.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 30% 50%;
 }
 header:before
 {
@@ -32,6 +35,17 @@ header:before
 	height: 100%;
 	z-index: 1;
 }
+header:after
+{
+	content:"";
+	position: absolute;
+	bottom:0%;
+	display: block;
+	background: rgba(0,0,0,0.55);
+	width: 100%;
+	height: 132px;
+	z-index: 1;
+}
 header > *
 {
 	position: relative;
@@ -39,7 +53,7 @@ header > *
 }
 h1
 {
-	font-size: 30px;
+	font-size: 25px;
 	color: rgb(255,255,255);
 	font-family: "Helvetica Neue";
 	text-align: center;
@@ -49,6 +63,52 @@ h1
 	margin-top: 29px;
 	margin-bottom: 29px;
 }
+ 
+@media (min-width: 768px) {
+	  h1
+	{
+		font-size: 30px;
+		color: rgb(255,255,255);
+		font-family: "Helvetica Neue";
+		text-align: center;
+		font-weight: 800;
+		text-transform: uppercase;
+		padding: 0;
+		margin-top: 29px;
+		margin-bottom: 29px;
+	}
+}
+ 
+@media (min-width: 992px) {
+	  h1
+	{
+		font-size: 30px;
+		color: rgb(255,255,255);
+		font-family: "Helvetica Neue";
+		text-align: center;
+		font-weight: 800;
+		text-transform: uppercase;
+		padding: 0;
+		margin-top: 29px;
+		margin-bottom: 29px;
+	}
+}
+ 
+@media (min-width: 1200px) {
+	  h1
+	{
+		font-size: 30px;
+		color: rgb(255,255,255);
+		font-family: "Helvetica Neue";
+		text-align: center;
+		font-weight: 800;
+		text-transform: uppercase;
+		padding: 0;
+		margin-top: 29px;
+		margin-bottom: 29px;
+	}
+}
+
 h2
 {
 	font-size: 30px;
@@ -92,6 +152,10 @@ ul
 {
 	margin: 0;
 	padding: 0;
+}
+yamaps
+{
+	filter: grayscale(100%); 
 }
 .or
 {
@@ -152,7 +216,11 @@ ul
 {
 	margin-top: 33px;
 	height: 55px;
-}	
+}
+.header	.container
+{
+	height: 620px;
+}
 .header .head div
 {
 	height: 55px;
@@ -167,7 +235,7 @@ ul
 }
 .header .title
 {
-	margin-top: 104px;
+	margin-top: 50px;
 }
 .header .title div
 {
@@ -182,7 +250,46 @@ ul
 }
 .header .timer
 {
-	position: relative;
+	position: absolute;
+	bottom: 0;
+	height: 132px;
+	width:100%;
+	padding-top: 10px;
+}
+
+.header .timer .title
+{
+	font-size: 14px;
+	font-family: "Helvetica Neue";
+	color:#fff;
+	font-weight: 800;
+	text-align: center;
+	margin:0;
+	padding-bottom: 10px;
+}
+.header .timer .time:not(:last-child)
+{
+	list-style-type:none;
+	border-right:2px solid #d26238;
+}
+
+.header .timer .c1
+{
+	font-size: 36px;
+	font-family: "Helvetica Neue";
+	color:#fff;
+	font-weight: 800;
+	text-align: center;
+	margin:0;
+}
+.header .timer .c2
+{
+	font-size: 14px;
+	font-family: "Helvetica Neue";
+	color:#fff;
+	font-weight: 800;
+	text-align: center;
+	margin:0;
 }
 /*
 	END HEADER
@@ -236,6 +343,9 @@ ul
 .block2
 {
 	position: relative;
+	background-image: url(../img/bg2.png);
+	background-size: cover;
+	background-repeat: no-repeat;
 	/*padding-top: 110px;
 	padding-bottom: 110px;
 	*/
@@ -454,6 +564,8 @@ ul
 /*
 	FOOTER
 */
+
+
 .footer
 {
 	position: relative;
@@ -471,6 +583,90 @@ ul
 .footer .block
 {
 	position: absolute;
+}
+.footer .block>*
+{
+	position: relative;
+	z-index: 2;
+}
+
+ /* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) { 
+	.footer
+	{
+		position: relative;
+	}
+	.footer::before
+	{
+		content:"";
+		position: absolute;
+		display: block;
+		background: rgba(0,0,0,0.85);
+		width: 50%;
+		height: 100%;
+		z-index: 1;
+	}
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min) { 
+	.footer
+	{
+		position: relative;
+	}
+	.footer::before
+	{
+		content:"";
+		position: absolute;
+		display: block;
+		background: rgba(0,0,0,0.85);
+		width: 50%;
+		height: 100%;
+		z-index: 1;
+	}
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg-min) {
+	.footer
+	{
+		position: relative;
+	}
+	.footer::before
+	{
+		content:"";
+		position: absolute;
+		display: block;
+		background: rgba(0,0,0,0.85);
+		width: 50%;
+		height: 100%;
+		z-index: 1;
+	}
+ }
+.footer .block img
+{
+	padding-top: 50px;
+	padding-right: 64px;
+}
+.footer .block ul
+{
+	margin-top: 20px;
+	padding-right: 64px;
+}
+.footer .block ul.marg
+{
+	margin-top: 90px;
+}
+.footer .block li
+{
+	list-style-type:none;
+	font-family: 'Helvetica Neue';
+	font-size: 18px;
+	color:#fff;
+	text-align: right;
 }
 /*
 	END FOOTER
